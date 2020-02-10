@@ -12,7 +12,7 @@
 
     <artifactId>kotlindemo-presentation</artifactId>
 
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -26,5 +26,6 @@
             <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
     </dependencies>
+
 
 </project>

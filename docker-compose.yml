@@ -1,8 +1,11 @@
 version: "3"
 services:
-  mongo:
-    image: mongo
+  postgres:
+    image: postgres
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: password
+      POSTGRES_USER: pgadmin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: ares
+    ports:
+    - 5432:5432

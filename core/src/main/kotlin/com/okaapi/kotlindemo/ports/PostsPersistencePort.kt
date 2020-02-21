@@ -1,7 +1,8 @@
 package com.okaapi.kotlindemo.ports
 
 import com.okaapi.kotlindemo.model.Post
+import kotlinx.coroutines.flow.Flow
 
 interface PostsPersistencePort {
-    fun getPosts(): List<Post>
+    suspend fun getPosts(): Flow<Post>
 }

@@ -1,6 +1,7 @@
 package com.okaapi.kotlindemo.repositories
 
 import com.okaapi.kotlindemo.model.PostEntity
-import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.data.repository.reactive.ReactiveCrudRepository
+import java.util.*
 
-interface PostsRepository : JpaRepository<PostEntity, UUID>
+interface PostsRepository : ReactiveCrudRepository<PostEntity, UUID>

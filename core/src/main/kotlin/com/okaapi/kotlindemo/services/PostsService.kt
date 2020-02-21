@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service
 @Service
 class PostsService(val persistencePort: PostsPersistencePort) {
 
-    fun getPosts() = persistencePort.getPosts()
+    suspend fun getPosts() = persistencePort.getPosts()
 
 }

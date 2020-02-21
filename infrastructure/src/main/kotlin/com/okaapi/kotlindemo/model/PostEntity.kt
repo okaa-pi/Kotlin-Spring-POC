@@ -1,20 +1,17 @@
 package com.okaapi.kotlindemo.model
 
+import org.springframework.data.annotation.Id
+import org.springframework.data.relational.core.mapping.Table
 import java.util.*
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
-import javax.persistence.Table
 
-@Entity
-@Table(name = "posts")
+@Table("posts")
 class PostEntity(
         var title: String,
         var content: String,
-        @Id @GeneratedValue var id: UUID? = null) {
+        @Id var id: UUID? = null) {
 
-    fun toPost() = Post(title, content)
+    suspend fun toPost() = Post(title, content)
 
 }
 
-fun Post.toEntity() = PostEntity(title = title, content = content)
+suspend fun Post.toEntity() = PostEntity(title = title, content = content)
